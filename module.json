@@ -1,0 +1,13 @@
+{
+    "name": "Mypage",
+    "alias": "mypage",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Mypage\\Providers\\MypageServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
