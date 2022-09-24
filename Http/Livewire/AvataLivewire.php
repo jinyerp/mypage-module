@@ -14,6 +14,8 @@ class AvataLivewire extends Component
     use WithFileUploads;
     public $photo;
 
+    public $viewfile;
+
     public function mount()
     {
         $user = Auth::user();
@@ -22,8 +24,14 @@ class AvataLivewire extends Component
 
     public function render()
     {
+        if($this->viewfile) {
+            $viewFile = $this->viewfile;
+        } else {
+            $viewFile = 'mypage::profile.avata';
+        }
+
         $profile = DB::table('user_profile')->where('user_id',$this->user_id)->first();
-        return view('mypage::profile.avata',['profile'=>$profile]);
+        return view($viewFile, ['profile'=>$profile]);
     }
 
 

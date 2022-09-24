@@ -12,7 +12,10 @@
                 </div>
                 <div
                 class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 text-gray-300">
+
+                    @if($profile && $profile->image)
                     <img src="/mypage/{{$profile->image}}" alt="User Avatar" class="inline-block w-16 h-16 rounded-full">
+                    @endif
                 </div>
             </div>
 

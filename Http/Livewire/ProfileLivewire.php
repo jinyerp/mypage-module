@@ -10,6 +10,8 @@ class ProfileLivewire extends Component
     public $form;
     public $user_id;
 
+    public $viewfile;
+
     public function mount()
     {
         $user = Auth::user();
@@ -23,7 +25,13 @@ class ProfileLivewire extends Component
 
     public function render()
     {
-        return view('mypage::profile.form');
+        if($this->viewfile) {
+            $viewFile = $this->viewfile;
+        } else {
+            $viewFile = 'mypage::profile.form';
+        }
+
+        return view($viewFile);
     }
 
     public function update()
