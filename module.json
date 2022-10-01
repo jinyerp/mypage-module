@@ -8,6 +8,8 @@
         "Modules\\Mypage\\Providers\\MypageServiceProvider"
     ],
     "aliases": {},
-    "files": [],
+    "files": [
+        "Helpers/Helper.php"
+    ],
     "requires": []
 }
